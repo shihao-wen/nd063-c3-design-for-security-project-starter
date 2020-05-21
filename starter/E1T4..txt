@@ -1,5 +1,10 @@
 Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
 
 # Poor practice 1
+Neither public nor private bucket have bucket policy attached to it.
+From the best practice, we need to have S3 buket policy to restrict and control access.
 
 # Poor practice 2
+Need to apply least preivilege IAM policy.
+For example, we can apply deny effect to our private bucket.
+And set specific action to be approved or denied by certain bucket.
