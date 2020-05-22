@@ -1,3 +1,5 @@
 Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+There are many findings regarding the ssh connection for application service instance, where low severity finding of TCP/UDP connection of port 5000. Medium severity of sshd listening on Port 22 which is reachable from the internet. And another medium severity is regarding the password authentication which is susceptible brute-force attack. And no password complexity mechanism or restriction on the instance was also noticed.
 
 Bonus - provide recommendations on how to remediate the vulnerabilities.
+Apply least previlige access and IAM role policy to certain instance/bucket.

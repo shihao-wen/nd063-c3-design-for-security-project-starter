@@ -1,3 +1,8 @@
 # Describe GuardDuty findings that were detected related to the brute force attack
+GuardDuty detected the SSHBruteForce attack and mark it as both high severity and low severity (Regarding different istances).
 
 # Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information.
+This finding’s severity is low if a brute force attack is aimed at one of your EC2 instances. This finding’s severity is high if your EC2 instance is being used to perform the brute force attack.
+For low severity findings, Credentials that were created exclusively for an EC2 instance through an instance launch role are being used from an external IP address.
+For high severity findsing, An unusual console login by a principal in your AWS account was observed.
+This finding is triggered when a console login is detected under suspicious circumstances. For example, if a principal with no prior history of doing so, invoked the ConsoleLogin API from a never-before-used client or an unusual location. This could be an indication of stolen credentials being used to gain access to your AWS account, or a valid user accessing the account in an invalid or less secure manner (for example, not over an approved VPN).
